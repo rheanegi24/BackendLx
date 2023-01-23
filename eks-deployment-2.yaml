@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: packersmovers
+  name: packersmovers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: packersmovers
+  template:
+    metadata:
+      labels:
+        app: packersmovers
+    spec:
+      containers:
+      - name: my-packers-movers
+        image: 703550360617.dkr.ecr.ap-south-1.amazonaws.com/java:1
+        imagePullPolicy: Always
