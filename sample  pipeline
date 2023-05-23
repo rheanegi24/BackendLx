@@ -1,0 +1,13 @@
+pipeline{
+
+    agent {label 'slavenode-1'}
+
+    stages {
+        
+        stage("cloning git repository"){
+            steps{
+                git branch: 'main', credentialsId: 'github_id', url: 'https://github.com/rheanegi24/BackendLx.git'
+            }
+        }
+    }
+}  
