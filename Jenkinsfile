@@ -6,7 +6,7 @@ pipeline{
         
         stage("cloning git repository"){
             steps{
-                git branch: 'develop', credentialsId: 'git_credentials', url: 'https://github.com/Uppala-Naveen-Goud/Backend.git'
+                git branch: 'develop', credentialsId: 'github_id', url: 'https://github.com/rheanegi24/BackendLx.git'
             }
         }    
         stage("build"){
